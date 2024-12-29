@@ -33,7 +33,7 @@ def criar_banco_de_dados(df, nome_db):
     
 def visualizar_banco(nome_db):
     conn = sq.connect(nome_db)
-    query = "SELECT * FROM diabetes WHERE Glucose > 100 LIMIT 100"  # Limita a 10 primeiros registros
+    query = "SELECT * FROM diabetes WHERE Glucose > 100 LIMIT 100" # Limita a 10 primeiros registros
     df = pd.read_sql(query, conn)
     print(df.head(100))  # Exibe as 10 primeiras linhas
     conn.close()
